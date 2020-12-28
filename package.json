@@ -1,10 +1,11 @@
 {
   "name": "organizations",
   "version": "1.0.0",
-  "description": "## Dependencies and System Requirements",
-  "main": "index.js",
+  "description": "CLEAR - Organizations",
+  "type": "module",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon -r dotenv/config src/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/astericky/28-12-2020-chris-sanders-clear/issues"
   },
-  "homepage": "https://github.com/astericky/28-12-2020-chris-sanders-clear#readme"
+  "homepage": "https://github.com/astericky/28-12-2020-chris-sanders-clear#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.8"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6"
+  }
 }
