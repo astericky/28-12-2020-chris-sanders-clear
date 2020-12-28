@@ -2,7 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import organizationrRouter from './routes/organizations.js'
 
-mongoose.connect(process.env.DATABASE_URL_LOCAL, { useCreateIndex: true, useNewUrlParser: true,  useUnifiedTopology: true })
+mongoose.connect(process.env.DATABASE_URL, { useCreateIndex: true, useNewUrlParser: true,  useUnifiedTopology: true })
 const db = mongoose.connection
 db.on('error', (error) => console.log(error))
 db.once('open', () => console.log('Connected to Database'))

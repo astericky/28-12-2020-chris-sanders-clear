@@ -18,4 +18,4 @@ Content-Type: application/json
 ###
 
 
-GET http://localhost:3000/organizations?search=Green
+GET http://localhost:3000/organizations?search=Apple
