@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "CLEAR - Organizations",
   "type": "module",
-  "main": "src/index.js",
+  "main": "src/server.js",
   "scripts": {
-    "dev": "nodemon -r dotenv/config src/index.js"
+    "dev": "nodemon -r dotenv/config src/server.js"
   },
   "repository": {
     "type": "git",
