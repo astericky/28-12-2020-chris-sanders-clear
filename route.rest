@@ -1,0 +1,15 @@
+
+GET http://localhost:3000/organizations
+
+
+###
+
+
+POST http://localhost:3000/organizations
+Content-Type: application/json
+
+{
+  "name": "Apple",
+  "numberOfEmployees": 10000,
+  "type": "Private"
+}
