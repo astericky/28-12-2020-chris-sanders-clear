@@ -1,0 +1,24 @@
+{
+  "name": "organizations",
+  "version": "1.0.0",
+  "description": "## Dependencies and System Requirements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astericky/28-12-2020-chris-sanders-clear.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "JavaScript",
+    "Docker"
+  ],
+  "author": "Chris Sanders",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astericky/28-12-2020-chris-sanders-clear/issues"
+  },
+  "homepage": "https://github.com/astericky/28-12-2020-chris-sanders-clear#readme"
+}
