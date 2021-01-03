@@ -28,7 +28,7 @@ describe('Organization', () => {
 
   it('should display organizations that match search criteria', async () => {
     const res = await request(app)
-      .get('/organizations?search=Google')
+      .get('/organizations?search=10000')
 
     expect(res.statusCode).toEqual(200)
     expect(res.body.length).toEqual(1)
