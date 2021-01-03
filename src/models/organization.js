@@ -8,7 +8,6 @@ const organizationSchema = new mongoose.Schema({
   startDate: {
     type: Date,
     required: true,
-    default: Date.now,
   },
   numberOfEmployees: {
     type: Number,

@@ -6,6 +6,7 @@ const router = express.Router()
 router.post('/', async (req, res) => {
   const organization = new Organization({
     ...req.body,
+    startDate: Date(req.body.startDate),
   })
 
   try {
