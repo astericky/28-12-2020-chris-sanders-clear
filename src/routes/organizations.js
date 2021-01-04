@@ -36,6 +36,7 @@ async function getOrganizations(req, res, next) {
     ]
   }
 
+  // NOTE:
   // To search for the date
   // 1. check if date exists
   // 2. put the search term into a date to search
