@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
   }
 })
 
-router.get('/', getOrganizations, (req, res) => {
+router.get('/', getOrganizations, (_req, res) => {
   res.send(res.organizations)
 })
 
