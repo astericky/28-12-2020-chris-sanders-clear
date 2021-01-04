@@ -42,7 +42,7 @@ async function getOrganizations(req, res, next) {
   // 3. and a next date to search
   // 4. increate the next date to search by 1 day
   // 5. then find all organizations that are greater than or equal to the date to search
-  // 6. or less than the next date to search which starts at 12 the next day tomorrow
+  // 6. or less than the next date to search which starts at 12am the next day
   if (date) {
     let dateToSearch = new Date(date)
     let nextDateToSearch = new Date(date)
