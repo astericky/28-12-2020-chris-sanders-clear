@@ -9,14 +9,26 @@ POST http://localhost:3000/organizations
 Content-Type: application/json
 
 {
-  "name": "Google2",
-  "startDate": "2020/04/03",
-  "numberOfEmployees": 10000,
-  "type": "Green"
+  "name": "Apple 11500",
+  "startDate": "2020/10/30",
+  "numberOfEmployees": 11000,
+  "type": "Blue 46"
 }
 
 
 ###
 
 
-GET http://localhost:3000/organizations?search=Apple
+GET http://localhost:3000/organizations?text=Google
+
+
+###
+
+
+GET http://localhost:3000/organizations?numberOfEmployees=10000
+
+
+###
+
+
+GET http://localhost:3000/organizations?date=2020-10-30

@@ -6,7 +6,7 @@ const router = express.Router()
 router.post('/', async (req, res) => {
   const organization = new Organization({
     ...req.body,
-    startDate: Date(req.body.startDate),
+    startDate: new Date(req.body.startDate),
   })
 
   try {
@@ -22,18 +22,50 @@ router.get('/', getOrganizations, (req, res) => {
 })
 
 async function getOrganizations(req, res, next) {
-  let organizations
-  try {
-    organizations = await Organization.find({ $text: { $search: req.query.search }})
+  let searchResult = []
+  let textSearchResult
+  let dateSearchResult
+  let numberOfEmployeeSearchResult
+  let { text = null, date = null, numberOfEmployees = null } = req.query
 
-    if (organizations == null) {
-      return res.status(404).json({ message: 'Cannot find organization' })
-    }
-  } catch (err) {
-    return res.status(500).json({ message: err.message })
+  if (text) {
+    textSearchResult = await Organization.find({ $text: { $search: text } })
+    searchResult = [
+      ...searchResult,
+      ...textSearchResult,
+    ]
   }
 
-  res.organizations = organizations
+  // To search for the date
+  // 1. check if date exists
+  // 2. put the search term into a date to search
+  // 3. and a next date to search
+  // 4. increate the next date to search by 1 day
+  // 5. then find all organizations that are greater than or equal to the date to search
+  // 6. or less than the next date to search which starts at 12 the next day tomorrow
+  if (date) {
+    let dateToSearch = new Date(date)
+    let nextDateToSearch = new Date(date)
+
+    // set the nextDate to search to the next day after the search date
+    nextDateToSearch.setDate(nextDateToSearch.getDate() + 1)
+
+    dateSearchResult = await Organization.find({ startDate: { $gte: dateToSearch, $lt: nextDateToSearch } })
+    searchResult = [
+      ...searchResult,
+      ...dateSearchResult,
+    ]
+  }
+
+  if (numberOfEmployees) {
+    numberOfEmployeeSearchResult = await Organization.find({ numberOfEmployees: numberOfEmployees })
+    searchResult = [
+      ...searchResult,
+      ...numberOfEmployeeSearchResult,
+    ]
+  }
+
+  res.organizations = searchResult
   next()
 }
 

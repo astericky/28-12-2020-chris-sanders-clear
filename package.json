@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "nodemon -r dotenv/config src/server.js",
     "prod": "node -r dotenv/config src/server.js",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest --testTimeout=10000 --verbose"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --testTimeout=10000 --verbose --detectOpenHandles"
   },
   "repository": {
     "type": "git",

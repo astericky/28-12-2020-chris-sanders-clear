@@ -21,8 +21,6 @@ const organizationSchema = new mongoose.Schema({
 
 organizationSchema.index({
   name: 'text',
-  startDate: 'text',
-  numberOfEmployees: 'text',
   type: 'text'
 })
 
