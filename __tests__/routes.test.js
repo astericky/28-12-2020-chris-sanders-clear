@@ -1,7 +1,6 @@
 import mongoose from 'mongoose'
 import request from 'supertest'
-import organizations from '../src/models/organization.js'
-import app from '../test-server.js'
+import app from '../src/server.js'
 
 
 describe('Organization', () => {
