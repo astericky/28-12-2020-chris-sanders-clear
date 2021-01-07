@@ -21,7 +21,7 @@
 
 build and start test project
 
-- run command `./test.sh`
+- run command `./scripts/test.sh`
 
 
 ## Notes
