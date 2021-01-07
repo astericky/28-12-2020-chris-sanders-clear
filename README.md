@@ -29,6 +29,21 @@ build and start test project
 
 ## How to use API
 
+- to create organizations `http://localhost:3000/organizations`
+  - use POST HTTP Method
+  - use `Content-Type: application/json`
+  - pass the data below to create new item
+
+```json
+{
+  "name": "Apple 11500",
+  "startDate": "2020/10/30",
+  "numberOfEmployees": 11000,
+  "type": "Blue 46"
+}
+
+```
+
 - to get all organizations `http://localhost:3000/organizations`
 - to search text use `http://localhost:3000/organizations?text=Apple`
 - to search number of employees use `http://localhost:3000/organizations?numberOfEmployees=10000`
