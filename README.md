@@ -8,12 +8,10 @@
   - run command `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`
   - or run command `wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`
 
-
 ## Setup
 
 - make sure Docker Desktop is running on your machine
 - run command `npm i`
-
 
 ## Run Project
 
@@ -25,11 +23,9 @@ build and start test project
 
 - run command `./scripts/test.sh`
 
-
 ## Deploy Project
 
 - run command `git push heroku main`
-
 
 ## How to use API
 
