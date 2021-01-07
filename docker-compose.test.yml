@@ -3,7 +3,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: ./Dockerfile-dev
+      dockerfile: ./Dockerfile.dev
     ports:
       - "3000:3000"
     environment:
@@ -11,7 +11,7 @@ services:
       - DATABASE_URL=mongodb://mongo:27017/organizations
     depends_on:
       - mongo
-    command: npm run dev
+    command: npm run test
   mongo:
     image: mongo
     ports:
