@@ -23,9 +23,5 @@ build and start test project
 
 - run command `./test.sh`
 
-run tests
-
-- run command `npm test`
-
 
 ## Notes
