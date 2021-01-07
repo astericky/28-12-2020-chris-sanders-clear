@@ -25,7 +25,7 @@ build and start test project
 
 ## Deploy Project
 
-- run command `git push heroku main`
+- run command `./scripts/deploy.sh`
 
 ## How to use API
 
