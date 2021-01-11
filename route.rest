@@ -32,3 +32,9 @@ GET http://localhost:3000/organizations?numberOfEmployees=10000
 
 
 GET http://localhost:3000/organizations?date=2020-10-30
+
+
+###
+
+
+GET http://localhost:3000/organizations?blob=Google
