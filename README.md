@@ -7,7 +7,7 @@
 - Install [Node Version Manager](https://github.com/nvm-sh/nvm#installing-and-updating)
   - run command `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`
   - or run command `wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash`
-- Install Node `nvm 14.15.3`
+- Install Node `nvm install 14.15.3`
 
 ## Setup
 
